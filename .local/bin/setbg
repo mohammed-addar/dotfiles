@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#this script run by itself, set wallpaper, and generates a colorscheme if wal is installed
+
+#bg location
+bgloc="${XDG_DATA_HOME:-$HOME/.config}/wallpaper/wall-01.png"
+
+
+
+# If pywal is installed, use it.
+if command -v wal >/dev/null 2>&1 ; then
+	#wal -n -i "$(readlink -f "$bgloc")" >/dev/null 2>&1
+	#wal -n -i "$(readlink -f $bgloc)" -o "${XDG_CONFIG_HOME:-$HOME/.config}/wal/postrun" >/dev/null 2>&1
+	wal --theme sexy-navy-and-ivory
+	xrdb -merge ~/.cache/wal/colors.Xresources
+fi
+
+xwallpaper --zoom "$bgloc" 
+
+# If running, dwm hit the key to refresh the color scheme.
+#(not sure about this)pidof dwm >/dev/null && xdotool key super+F5
+

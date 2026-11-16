@@ -1,0 +1,20 @@
+#!/bin/sh
+# .xprofile
+# this file runs when a DM logs you into a graphical session
+# if you startx/xinit like a chad, this file will also be sourced
+
+
+setbg &
+dwmblocks &
+dunst &
+#xrdb ${XDG_CONFIG_HOME:-$HOME}/.xresources & xrdbpid=$!
+
+autostart="picom"
+
+for program in $autostart; do
+	pidof -sx "$program" || "$program" &
+done >/dev/null 2>&1
+
+
+#ensuring that xrdb has finished running before moving to startx the wm/de
+[ -n "$xrdbpid" ] && wait "$xrdbpid"

@@ -1,0 +1,8 @@
+#!/bin/sh
+BUTTON="${BUTTON:-$BLOCK_BUTTON}"
+
+case "$BUTTON" in
+    1) notify-send -r 1004 "Calendar" "$(cal)" ;;
+esac
+
+date '+%a, %b %d 󰇙 %I:%M %p'

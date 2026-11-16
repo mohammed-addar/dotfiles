@@ -1,0 +1,16 @@
+#!/bin/sh
+BUTTON="${BUTTON:-$BLOCK_BUTTON}"
+
+case "$BUTTON" in
+    1) pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+10 dwmblocks ;;
+    4) pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 dwmblocks ;;
+    5) pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 dwmblocks ;;
+esac
+
+# Display status
+if pactl get-sink-mute @DEFAULT_SINK@ | grep -q "yes"; then
+    echo "󰝟 Muted"
+else
+    vol="$(pactl get-sink-volume @DEFAULT_SINK@ | awk '/Volume:/ {print $5}' | head -n 1)"
+    echo "󰕾 $vol"
+fi

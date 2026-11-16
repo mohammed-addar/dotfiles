@@ -1,0 +1,9 @@
+#! /bin/sh 
+BUTTON="${BUTTON:-$BLOCK_BUTTON}"
+
+case "$BUTTON" in
+    1) notify-send -r 1001 "Top RAM Consumers" "$(ps axo rss,comm --sort=-rss | head -n 6 | tail -n 5 | awk '{printf "%.0f MB\t%s\n", $1/1024, $2}')" ;;
+esac
+
+mem="$(free -h | awk '/^Mem:/ {print $3 "/" $2}' | sed s/i//g)"
+echo -e "$mem"

@@ -1,0 +1,361 @@
+
+==============================================================================
+kickstart:                                                                  ✅
+
+kickstart.nvim ~
+- NOTE: Not every warning is a 'must-fix' in `:checkhealth`
+
+    Fix only warnings for plugins and languages you intend to use.
+      Mason will give warnings for languages that are not installed.
+      You do not need to install, unless you want to use those languages!
+- System Information: {
+    machine = "x86_64",
+    release = "7.2.4-arch1-2",
+    sysname = "Linux",
+    version = "#1 SMP PREEMPT_DYNAMIC Tue, 08 Sep 2026 10:22:31 +0000"
+  }
+- ✅ OK Neovim version is: '0.12.5+v0.12.5'
+- ✅ OK Found executable: 'git'
+- ✅ OK Found executable: 'make'
+- ✅ OK Found executable: 'unzip'
+- ✅ OK Found executable: 'rg'
+
+==============================================================================
+lazy:                                                               2 ⚠️  1 ❌
+
+lazy.nvim ~
+- {lazy.nvim} version `11.17.5`
+- ✅ OK {git} `version 2.55.0`
+- ✅ OK no existing packages found by other package managers
+- ✅ OK packer_compiled.lua not found
+
+luarocks ~
+- checking `hererocks` installation
+- ✅ OK no plugins require `luarocks`, so you can ignore any warnings below
+- ✅ OK {python3} `Python 3.14.7`
+- ❌ ERROR {/home/mohammed/.local/share/nvim/lazy-rocks/hererocks/bin/luarocks} not installed
+- ⚠️ WARNING {/home/mohammed/.local/share/nvim/lazy-rocks/hererocks/bin/lua} version `5.1` not installed
+- ⚠️ WARNING Lazy won't be able to install plugins that require `luarocks`.
+  Here's what you can do:
+   - fix your `luarocks` installation
+   - disable *hererocks* with `opts.rocks.hererocks = false`
+   - disable `luarocks` support completely with `opts.rocks.enabled = false`
+
+==============================================================================
+lspconfig:                                                                  ✅
+
+- Skipped. This healthcheck is redundant with `:checkhealth vim.lsp`.
+
+==============================================================================
+luasnip:                                                                  1 ⚠️
+
+luasnip ~
+- ⚠️ WARNING For Variable/Placeholder-transformations, luasnip requires
+      the jsregexp library. See `:help |luasnip-lsp-snippets-transformations`| for advice
+  
+
+==============================================================================
+mason:                                                                    6 ⚠️
+
+mason.nvim ~
+- ✅ OK mason.nvim version v2.3.1
+- ✅ OK PATH: prepend
+- ✅ OK Providers: 
+    mason.providers.registry-api
+    mason.providers.client
+- ✅ OK neovim version >= 0.10.0
+
+mason.nvim [Registries] ~
+- ✅ OK Registry `github.com/mason-org/mason-registry version: 2026-10-31-zany-belt` is installed.
+- ✅ OK Registry `SynthesizedRegistrySource` is installed.
+
+mason.nvim [Core utils] ~
+- ✅ OK unzip: `UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send`
+- ✅ OK wget: `GNU Wget 1.25.0, a non-interactive network retriever.`
+- ✅ OK curl: `curl 8.22.0 (x86_64-pc-linux-gnu) libcurl/8.22.0 OpenSSL/3.6.4 zlib/1.3.2 brotli/1.2.0 zstd/1.5.7 libidn2/2.3.8 libpsl/0.21.5 libssh2/1.11.1 nghttp2/1.70.0 ngtcp2/1.25.0 nghttp3/1.18.0 mit-krb5/1.22.2`
+- ✅ OK gzip: `gzip 1.14-modified`
+- ✅ OK tar: `tar (GNU tar) 1.35`
+- ✅ OK bash: `GNU bash, version 5.3.15(1)-release (x86_64-pc-linux-gnu)`
+
+mason.nvim [Languages] ~
+- ⚠️ WARNING cargo: not available
+  - ADVICE:
+    - spawn: cargo failed with exit code - and signal -. Could not find executable "cargo" in PATH.
+
+- ⚠️ WARNING luarocks: not available
+  - ADVICE:
+    - spawn: luarocks failed with exit code - and signal -. Could not find executable "luarocks" in PATH.
+
+- ⚠️ WARNING Composer: not available
+  - ADVICE:
+    - spawn: composer failed with exit code - and signal -. Could not find executable "composer" in PATH.
+
+- ⚠️ WARNING PHP: not available
+  - ADVICE:
+    - spawn: php failed with exit code - and signal -. Could not find executable "php" in PATH.
+
+- ✅ OK Go: `go version go1.27.1-X:nodwarf5 linux/amd64`
+- ⚠️ WARNING javac: not available
+  - ADVICE:
+    - spawn: javac failed with exit code - and signal -. Could not find executable "javac" in PATH.
+
+- ✅ OK Ruby: `ruby 3.4.10 (2026-06-30 revision 2b0b7728dc) +PRISM [x86_64-linux]`
+- ⚠️ WARNING julia: not available
+  - ADVICE:
+    - spawn: julia failed with exit code - and signal -. Could not find executable "julia" in PATH.
+
+- ✅ OK node: `v20.9.0`
+- ✅ OK python: `Python 3.14.7`
+- ✅ OK java: `openjdk version "26.0.2.1" 2026-08-18`
+- ✅ OK RubyGem: `3.6.9`
+- ✅ OK pip: `pip 26.2.1 from /usr/lib/python3.14/site-packages/pip (python 3.14)`
+- ✅ OK npm: `10.1.0`
+- ✅ OK python venv: `Ok`
+
+==============================================================================
+mason-lspconfig:                                                            ✅
+
+mason-lspconfig.nvim ~
+- ✅ OK Neovim v0.11
+- ✅ OK mason.nvim v2
+
+==============================================================================
+nvim-treesitter:                                                          1 ❌
+
+Requirements ~
+- ✅ OK Neovim was compiled with tree-sitter runtime ABI version 15 (required >=13).
+- ❌ ERROR tree-sitter-cli not found
+- ✅ OK tar 1.35.0 (/usr/bin/tar)
+- ✅ OK curl 8.22.0 (/usr/bin/curl)
+  curl 8.22.0 (x86_64-pc-linux-gnu) libcurl/8.22.0 OpenSSL/3.6.4 zlib/1.3.2 brotli/1.2.0 zstd/1.5.7 libidn2/2.3.8 libpsl/0.21.5 libssh2/1.11.1 nghttp2/1.70.0 ngtcp2/1.25.0 nghttp3/1.18.0 mit-krb5/1.22.2
+  Release-Date: 2026-09-02
+  Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns mqtt mqtts pop3 pop3s rtsp scp sftp smtp smtps telnet tftp ws wss
+  Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTP3 HTTPS-proxy IDN IPv6 Kerberos Largefile libz PSL SPNEGO SSL threadsafe UnixSockets zstd
+
+OS Info ~
+- sysname: Linux
+- machine: x86_64
+- version: #1 SMP PREEMPT_DYNAMIC Tue, 08 Sep 2026 10:22:31 +0000
+- release: 7.2.4-arch1-2
+
+Install directory for parsers and queries ~
+- /home/mohammed/.local/share/nvim/site
+- ✅ OK is writable.
+- ✅ OK is in runtimepath.
+
+Installed languages     H L F I J ~
+- html_tags
+
+  Legend: [H]ighlights, [L]ocals, [F]olds, [I]ndents, In[J]ections ~
+
+==============================================================================
+telescope:                                                                  ✅
+
+Checking for required plugins ~
+- ✅ OK plenary installed.
+- ✅ OK nvim-treesitter installed.
+
+Checking external dependencies ~
+- ✅ OK rg: found ripgrep 15.2.0
+- ✅ OK fd: found fd 10.5.0
+
+===== Installed extensions ===== ~
+
+==============================================================================
+vim.deprecated:                                                             ✅
+
+- ✅ OK No deprecated functions detected
+
+==============================================================================
+vim.health:                                                               1 ⚠️
+
+System Info ~
+- ⚠️ WARNING Nvim 0.12.6 is available (current: 0.12.5)
+- Nvim version: `v0.12.5` 
+- Operating system: Linux 7.2.4-arch1-2
+- Terminal: unknown
+- $TERM: st-256color
+
+Configuration ~
+- ✅ OK no issues found
+
+Runtime ~
+- ✅ OK $VIMRUNTIME: /usr/share/nvim/runtime
+
+Performance ~
+- ✅ OK Build type: RelWithDebInfo
+
+Remote Plugins ~
+- ✅ OK Up to date
+
+Terminal ~
+- key_backspace (kbs) terminfo entry: `key_backspace=\177`
+- key_dc (kdch1) terminfo entry: `key_dc=\E[3~`
+
+External Tools ~
+- ✅ OK ripgrep 15.2.0 (/usr/bin/rg)
+- ✅ OK vim.ui.open: handler found (xdg-open)
+- ✅ OK git version 2.55.0 (/usr/bin/git)
+- ✅ OK curl 8.22.0 (/usr/bin/curl)
+  curl 8.22.0 (x86_64-pc-linux-gnu) libcurl/8.22.0 OpenSSL/3.6.4 zlib/1.3.2 brotli/1.2.0 zstd/1.5.7 libidn2/2.3.8 libpsl/0.21.5 libssh2/1.11.1 nghttp2/1.70.0 ngtcp2/1.25.0 nghttp3/1.18.0 mit-krb5/1.22.2
+  Release-Date: 2026-09-02
+  Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns mqtt mqtts pop3 pop3s rtsp scp sftp smtp smtps telnet tftp ws wss
+  Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTP3 HTTPS-proxy IDN IPv6 Kerberos Largefile libz PSL SPNEGO SSL threadsafe UnixSockets zstd
+
+==============================================================================
+vim.lsp:                                                                    ✅
+
+- LSP log level : WARN
+- Log path: /home/mohammed/.local/state/nvim/lsp.log
+- Log size: 0 KB
+
+vim.lsp: Active Features ~
+
+vim.lsp: Active Clients ~
+- No active clients
+
+vim.lsp: Enabled Configurations ~
+- bashls:
+  - cmd: { "bash-language-server", "start" }
+  - filetypes: bash, sh
+  - root_markers: { ".git" }
+  - settings: {
+      bashIde = {
+        globPattern = "*@(.sh|.inc|.bash|.command)"
+      }
+    }
+
+- lua_ls:
+  - cmd: { "lua-language-server" }
+  - filetypes: lua
+  - root_markers: { { ".emmyrc.json", ".luarc.json", ".luarc.jsonc" }, { ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml" }, { ".git" } }
+  - settings: {
+      Lua = {
+        codeLens = {
+          enable = true
+        },
+        hint = {
+          enable = true,
+          semicolon = "Disable"
+        }
+      }
+    }
+
+
+vim.lsp: File Watcher ~
+- file watching "(workspace/didChangeWatchedFiles)" disabled on all clients
+
+vim.lsp: Position Encodings ~
+- No active clients
+
+==============================================================================
+vim.pack:                                                                20 ⚠️
+
+vim.pack: basics ~
+- Git: version 2.55.0 (/usr/bin/git)
+- Lockfile: /home/mohammed/.config/nvim/nvim-pack-lock.json
+- Plugin directory: /home/mohammed/.local/share/nvim/site/pack/core/opt
+- ⚠️ WARNING Lockfile is present, plugin directory is absent. Restart Nvim and run `vim.pack.add({})` to install plugins from the lockfile
+
+vim.pack: lockfile ~
+- ⚠️ WARNING Plugin "guess-indent.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "guess-indent.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "plenary.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "plenary.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "mason-tool-installer.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "mason-tool-installer.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "nvim-lspconfig" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "nvim-lspconfig" }, { force = true })`
+- ⚠️ WARNING Plugin "mason.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "mason.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "mason-lspconfig.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "mason-lspconfig.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "mini.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "mini.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "blink.cmp" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "blink.cmp" }, { force = true })`
+- ⚠️ WARNING Plugin "LuaSnip" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "LuaSnip" }, { force = true })`
+- ⚠️ WARNING Plugin "telescope-ui-select.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "telescope-ui-select.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "conform.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "conform.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "which-key.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "which-key.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "tokyonight.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "tokyonight.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "fidget.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "fidget.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "todo-comments.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "todo-comments.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "nvim-treesitter" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "nvim-treesitter" }, { force = true })`
+- ⚠️ WARNING Plugin "telescope.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "telescope.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "gitsigns.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "gitsigns.nvim" }, { force = true })`
+- ⚠️ WARNING Plugin "telescope-fzf-native.nvim" is not installed but present in the lockfile. Restart Nvim and run `vim.pack.add({})` to autoinstall. To fully delete, run `vim.pack.del({ "telescope-fzf-native.nvim" }, { force = true })`
+
+==============================================================================
+vim.provider:                                                             4 ⚠️
+
+Clipboard (optional) ~
+- ✅ OK Clipboard tool found: xclip
+
+Node.js provider (optional) ~
+- Node.js: 20.9.0
+- ⚠️ WARNING Missing "neovim" npm (or yarn, pnpm) package.
+  - ADVICE:
+    - Run in shell: npm install -g neovim
+    - Run in shell (if you use yarn): yarn global add neovim
+    - Run in shell (if you use pnpm): pnpm install -g neovim
+    - You may disable this provider (and warning) by adding `let g:loaded_node_provider = 0` to your init.vim
+
+Perl provider (optional) ~
+- ⚠️ WARNING "Neovim::Ext" cpan module is not installed
+  - ADVICE:
+    - See :help |provider-perl| for more information.
+    - You can disable this provider (and warning) by adding `let g:loaded_perl_provider = 0` to your init.vim
+- ⚠️ WARNING No usable perl executable found
+
+Python 3 provider (optional) ~
+- `g:python3_host_prog` is not set. Searching for pynvim-python in the environment.
+- Executable: /usr/bin/pynvim-python
+- Python version: 3.14.7
+- pynvim version: 0.6.0
+- ✅ OK Latest pynvim is installed.
+
+Python virtualenv ~
+- ✅ OK no $VIRTUAL_ENV
+
+Ruby provider (optional) ~
+- Ruby: 3.4.10
+- ⚠️ WARNING `neovim-ruby-host` not found.
+  - ADVICE:
+    - Run `gem install neovim` to ensure the neovim RubyGem is installed.
+    - Run `gem environment` to ensure the gem bin directory is in $PATH.
+    - If you are using rvm/rbenv/chruby, try "rehashing".
+    - See :help |g:ruby_host_prog| for non-standard gem installations.
+    - You can disable this provider (and warning) by adding `let g:loaded_ruby_provider = 0` to your init.vim
+
+==============================================================================
+vim.treesitter:                                                             ✅
+
+Treesitter features ~
+- Treesitter ABI support: min 13, max 15
+- WASM parser support: false
+
+Treesitter parsers ~
+- ✅ OK Parser: c                         ABI: 15, path: /usr/share/nvim/runtime/parser/c.so
+- ✅ OK Parser: lua                       ABI: 15, path: /usr/share/nvim/runtime/parser/lua.so
+- ✅ OK Parser: markdown                  ABI: 15, path: /usr/share/nvim/runtime/parser/markdown.so
+- ✅ OK Parser: markdown_inline           ABI: 15, path: /usr/share/nvim/runtime/parser/markdown_inline.so
+- ✅ OK Parser: query                     ABI: 15, path: /usr/share/nvim/runtime/parser/query.so
+- ✅ OK Parser: vim                       ABI: 15, path: /usr/share/nvim/runtime/parser/vim.so
+- ✅ OK Parser: vimdoc                    ABI: 15, path: /usr/share/nvim/runtime/parser/vimdoc.so
+
+Treesitter queries ~
+- ✅ OK c               folds           /usr/share/nvim/runtime/queries/c
+- ✅ OK c               highlights      /usr/share/nvim/runtime/queries/c
+- ✅ OK c               injections      /usr/share/nvim/runtime/queries/c
+- ✅ OK html_tags       highlights      /home/mohammed/.local/share/nvim/site/queries/html_tags
+- ✅ OK html_tags       indents         /home/mohammed/.local/share/nvim/site/queries/html_tags
+- ✅ OK html_tags       injections      /home/mohammed/.local/share/nvim/site/queries/html_tags
+- ✅ OK lua             folds           /usr/share/nvim/runtime/queries/lua
+- ✅ OK lua             highlights      /usr/share/nvim/runtime/queries/lua
+- ✅ OK lua             injections      /usr/share/nvim/runtime/queries/lua
+- ✅ OK markdown        folds           /usr/share/nvim/runtime/queries/markdown
+- ✅ OK markdown        highlights      /usr/share/nvim/runtime/queries/markdown
+- ✅ OK markdown        injections      /usr/share/nvim/runtime/queries/markdown
+- ✅ OK markdown_inline highlights      /usr/share/nvim/runtime/queries/markdown_inline
+- ✅ OK markdown_inline injections      /usr/share/nvim/runtime/queries/markdown_inline
+- ✅ OK query           folds           /usr/share/nvim/runtime/queries/query
+- ✅ OK query           highlights      /usr/share/nvim/runtime/queries/query
+- ✅ OK vim             folds           /usr/share/nvim/runtime/queries/vim
+- ✅ OK vim             highlights      /usr/share/nvim/runtime/queries/vim
+- ✅ OK vim             injections      /usr/share/nvim/runtime/queries/vim
+- ✅ OK vimdoc          highlights      /usr/share/nvim/runtime/queries/vimdoc
+- ✅ OK vimdoc          injections      /usr/share/nvim/runtime/queries/vimdoc
+

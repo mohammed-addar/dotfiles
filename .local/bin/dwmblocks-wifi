@@ -1,0 +1,20 @@
+#!/bin/sh
+BUTTON="${BUTTON:-$BLOCK_BUTTON}"
+
+case "$BUTTON" in
+    1)
+        ip=$(ip route get 1.1.1.1 2>/dev/null | awk '{print $7}')
+        interface=$(ip route get 1.1.1.1 2>/dev/null | awk '{print $5}')
+        ssid=$(cat /sys/class/net/"$interface"/wireless/status 2>/dev/null || echo "$interface")
+        notify-send -r 1003 "Network Stats" "IP: $ip\nInterface: $interface"
+        ;;
+esac
+
+# Wifi
+if [ "$(cat /sys/class/net/w*/operstate 2>/dev/null)" = 'up' ] ; then
+	wifi="$(awk '/^\s*w/ { print " ", int($3 * 100 / 70) "%" }' /proc/net/wireless)"
+elif [ "$(cat /sys/class/net/w*/operstate 2>/dev/null)" = 'down' ] ; then
+	[ "$(cat /sys/class/net/w*/flags 2>/dev/null)" = '0x1003' ] && wifi="󱚽 " || wifi="󰖪 "
+fi
+
+printf "%s%s%s\n" "$wifi"
