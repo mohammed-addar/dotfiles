@@ -121,3 +121,4 @@ export PATH=$PATH:$HOME/go/bin
 
 export GTK_THEME=Arc-Dark
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

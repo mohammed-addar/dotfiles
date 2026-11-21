@@ -14,6 +14,7 @@ Dynamic window manager configured with per-client layout weights, gaps, transpar
   * [cfacts](https://dwm.suckless.org/patches/cfacts/) + [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/) (`dwm-cfacts-vanitygaps-6.4_combo.diff`) — Adjustable client size weights in the stack area alongside configurable inner/outer gaps.
   * [statuscmd](https://dwm.suckless.org/patches/statuscmd/) (`dwm-statuscmd-20260124-a9aa0d8.diff`) — Forwards mouse button clicks on status bar modules via signals to `dwmblocks-async`.
   * [systray](https://dwm.suckless.org/patches/systray/) (`dwm-systray-20260516-44dbc68.diff`) — Embedded X11 system tray in the bar.
+  * [attachbottom](https://dwm.suckless.org/patches/attachbottom/) (`dwm-attachbottom-6.8.diff`) — New clients attach at the bottom of the stack instead of the top.
 * **Custom C Modifications (`dwm.c` / `config.h`):**
   * Whitelisted `X_ReparentWindow` `BadMatch` errors inside `xerror()` so depth mismatches between the 32-bit ARGB bar (`alpha`) and 24-bit tray icons (e.g., Qt6/qBittorrent) do not terminate the X11 session.
   * Custom keybindings including `Mod + Shift + X` for screen locking (`slock`).
